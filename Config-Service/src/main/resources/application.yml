@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: Config-Server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/GloballogicServiceAndIntegration/celula2-epsilon-centauri/tree/CEC-050-fix/Config
+          default-label: CEC-050-fix
+          search-paths:
+          - Config
+          username: SoledadliW
+          password: sole1997dad
+server:
+  port: 8888
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      preferIpAddress: true

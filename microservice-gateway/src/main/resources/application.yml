@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: microservice-gateway
+    
+server:
+  port: 8020
+  
+zuul:
+  routes:
+    ShopProduct-Category:
+      path: /catalogs/**
+      url: http://localhost:9099/products/v1/catalog
+    ShopProduct-Product:
+      path: /products/**
+      url: http://localhost:9099/products/v1/product
+   
+
